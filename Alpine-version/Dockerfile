@@ -6,4 +6,6 @@ git
 
 CMD ["lighttpd", "start"]
 
-RUN cd /usr/local/apache2/htdocs && git init && git pull https://github.com/jeffcichonski/jeffcichonski.github.io.git
+RUN cd /var/www/localhost/htdocs/  && git init 
+
+RUN git pull https://github.com/jeffcichonski/jeffcichonski.github.io.git
