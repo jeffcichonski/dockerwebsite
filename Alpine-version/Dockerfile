@@ -1,10 +1,11 @@
 FROM alpine:latest 
 
-RUN apk add lighttpd
+RUN apk add --update \
+lighttpd \
+git \
 
-RUN rc-service lighttpd start
+CMD ["myapp", "start"]
 
-RUN apk add git
 
 RUN rm /usr/local/apache2/htdocs/index.html
 
