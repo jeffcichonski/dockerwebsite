@@ -4,7 +4,7 @@ RUN apk add --update lighttpd \
 git
 
 
-RUN cd /var/www/localhost/htdocs/  && git init && git clone https://github.com/jeffcichonski/jeffcichonski.github.io.git
+RUN cd /var/www/localhost/htdocs/  && git init && git pull https://github.com/jeffcichonski/jeffcichonski.github.io.git
 
 
 EXPOSE 80
