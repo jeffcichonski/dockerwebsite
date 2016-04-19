@@ -6,6 +6,5 @@ git
 
 CMD ["lighttpd", "start"]
 
-RUN cd /var/www/localhost/htdocs/  && git init 
+RUN cd /var/www/localhost/htdocs/  && wget https://github.com/jeffcichonski/dockerwebsite/archive/master.zip
 
-RUN git pull https://github.com/jeffcichonski/jeffcichonski.github.io.git
