@@ -4,8 +4,7 @@ RUN apk add --update lighttpd \
 git
 
 
-RUN cd /var/www/localhost/htdocs/  && git init && git pull https://github.com/jeffcichonski/jeffcichonski.github.io.git
-
+RUN echo "Lighttpd is running..." > /var/www/localhost/htdocs/index.html
 
 EXPOSE 80
 VOLUME /var/www/localhost
