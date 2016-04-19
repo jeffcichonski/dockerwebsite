@@ -8,6 +8,8 @@ RUN mkdir site && cd site && git init && git pull https://github.com/jeffcichons
 
 RUN cp -a /site/. /var/www/localhost/htdocs/ 
 
+RUN rm -r /site 
+
 EXPOSE 80
 VOLUME /var/www/localhost
 CMD ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
